@@ -1,0 +1,51 @@
+/* Stili personalizzati */
+#principale {
+    background-color: rgb(100, 0, 0);
+}
+
+#principale .navbar-brand,
+#principale .nav-link,
+#principale .nav-link.active,
+#principale .navbar-toggler-icon {
+    color: #fff !important;
+}
+
+#principale .navbar-toggler-icon {
+    background-color: #fff;
+}
+
+#logo {
+    width: 69px;
+    height: 5%;
+}
+
+/* Stili della Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    position: fixed;
+    height: 100%;
+    top: 56px; /* Altezza della navbar */
+    left: 0;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+}
+
+/* Stili del Carousel */
+.carousel-container {
+    margin-left: 270px; /* Regola secondo la larghezza della sidebar */
+    padding: 20px;
+}
