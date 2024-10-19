@@ -109,9 +109,9 @@
 </nav>
 <!---->
 <!-- Carousel -->
-<div id="carouselExample" class="carousel slide">
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000" style="background-image: url('./images/pokemon-pokeball-wallpapers-v0-wtln5xlfrmv81.webp'); background-size: cover; background-position: center;">
     <div class="carousel-inner" id="carousel-inner">
-        <!-- Images will be generated dynamically with JavaScript -->
+        <!-- Le immagini verranno generate dinamicamente con JavaScript -->
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -123,21 +123,78 @@
     </button>
 </div>
 
+<!-- Sezione Card con Contenitore -->
+<div class="container mt-5">
+    <div class="rounded-4 border border-3" style="border-color: rgb(0, 0, 0); padding: 20px; background-color: brown;">
+        <div class="row">
+            <div class="col-md-4"  style="text-align: center;">
+                <div class="card" style="height: 100%;">
+                   
+                    <img src="./images/cute-pokemon-pikachu-rain-desktop-wallpaper-preview.jpg" class="card-img-top" alt="Immagine 1" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                      <div class="rounded-4 border border-3" style="border-color: rgb(0, 0, 0); padding: 20px; background-color: rgb(189, 186, 186);">
+                        <h5 class="card-title">News</h5>
+                        <p class="card-text">Segui in tempo reale tutto ciò che accade all'interno del nostro progetto, i progressi e tutto relativo a traversia, inoltre se stai cercando un sito affidabile, lo hai trovato </p>
+                        <a href="#" class="btn btn-danger">Segui le news</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 " style="text-align: center;">
+                <div class="card" style="height: 100%;">
+                    <img src="./images/975819.jpg" class="card-img-top" alt="Immagine 2" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <div class="rounded-4 border border-3" style="border-color: rgb(0, 0, 0); padding: 20px; background-color: rgb(189, 186, 186);">
+                        <h5 class="card-title">Chi siamo, scoprici</h5>
+                        <p class="card-text">Il progetto,partito nel 2024 ha diversi collaboraori, pieni di energie e idee innovative : Tommaso,Mirko,Cosimo,Alex sono pronti a partire all'avventura </p>
+                        <a href="#" class="btn btn-danger">Scopri chi siamo</a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"  style="text-align: center;">
+                <div class="card" style="height: 100%;">
+                    <img src="./images/logo.jpg" class="card-img-top" alt="Immagine 3" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <div class="rounded-4 border border-3" style="border-color: rgb(0, 0, 0); padding: 20px; background-color: rgb(189, 186, 186);">
+                        <h5 class="card-title">Traversia, la nostra regione</h5>
+                        <p class="card-text">Traversia, la regione pokemon ispirata alla nostra splendida regione italia ha tantissima lore da essere scoperta, con nuovissimi pokemon ispirati alla penisola più bella.</p>
+                        <a href="#" class="btn btn-danger">Scopri di più su traversia</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!--script-->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script>
-    // Ensure the script runs after the DOM is loaded
+    // Assicurati che lo script venga eseguito dopo il caricamento del DOM
     document.addEventListener('DOMContentLoaded', function () {
-        // Select the carousel inner element
+        // Seleziona l'elemento carousel inner
         const carouselInner = document.getElementById('carousel-inner');
         
-        // Assuming `pokemonImages` is defined in your immagini.js
+        // Supponendo che l'array `arPokemon` sia definito nel file immagini.js
         arPokemon.forEach((image, index) => {
             const carouselItem = document.createElement('div');
             carouselItem.className = 'carousel-item' + (index === 0 ? ' active' : '');
-            carouselItem.innerHTML = `<img src="${image.trim()}" class="d-block w-20" alt="Slide ${index + 1}">`;
+            carouselItem.innerHTML = `<img src="${image.trim()}" class="d-block mx-auto" style="max-height: 400px;" alt="Slide ${index + 1}">`;
             carouselInner.appendChild(carouselItem);
         });
     });
+</script>
+
+
+
 </script>
 </body>
 </html>
